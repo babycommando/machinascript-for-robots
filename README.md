@@ -5,7 +5,7 @@
 ![example – 3](https://github.com/babycommando/machinascript/assets/71618056/f4e3f545-a4f6-4731-bbb9-474b75670b7f)
 ![example](https://github.com/babycommando/machinascript/assets/71618056/5ef748bc-8334-4e10-99bd-19dcc6229021)
 ![example – 4](https://github.com/babycommando/machinascript-for-robots/assets/71618056/2c18b953-bf94-4559-825a-da5fd5c61295)
-![example – 5](https://github.com/babycommando/machinascript/assets/71618056/cde64a94-cb9c-4ef7-be3d-3c567f2ac77d)
+![example – 5](https://github.com/babycommando/machinascript-for-robots/assets/71618056/2427ca37-47b5-45a1-8b44-8af446bac698)
 ![example – 6](https://github.com/babycommando/machinascript-for-robots/assets/71618056/f6c761c3-caca-42e0-865d-37b8002fa512)
 ![example – 7](https://github.com/babycommando/machinascript-for-robots/assets/71618056/a6cd7442-2705-49fc-87ed-263b809feb1d)
 
