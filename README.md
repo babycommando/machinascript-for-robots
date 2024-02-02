@@ -48,34 +48,34 @@ This is an example of the complete language structure
 {
   "Machina_Actions": {
     "action_1": {
-      "description": "looking up",
+      "description": "Positioning before taking a picture",
       "movements": {
         "1": {
           "motor_neck_vertical": 45,
           "motor_neck_horizontal": 0,
           "speed": "medium"
         }
-      }
+      },
+      "useSkills": {}
     },
     "action_2": {
-      "description": "taking picture",
+      "description": "Taking picture and indicating completion",
+      "movements": {},
       "useSkills": {
-        "1": "photograph"
+        "1": {
+          "skill": "photograph"
+        },
       }
     },
     "action_3": {
-      "description": "returning to normal position",
+      "description": "Returning to normal position",
       "movements": {
         "1": {
           "motor_neck_vertical": 0,
           "speed": "medium"
         }
       },
-      "useSkills": {
-        "1": {
-          "speak": "returned text from multimodal llm (photograph skill)"
-        }
-      }
+      "useSkills": {}
     }
   }
 }
