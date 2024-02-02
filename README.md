@@ -117,9 +117,8 @@ Here's a robot dance:
 
 ## Community
 Ready to share your projects to the world?
-
-Join our community on discord and use the hashtag #machinascript in your social media posts.
-Also follow our socials and consider supporting the project!
+Join our community on discord:
+https://discord.gg/CszE7JN3
 
 ## Note from the author
 ```
