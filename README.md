@@ -9,34 +9,9 @@
 ![example – 6](https://github.com/babycommando/machinascript-for-robots/assets/71618056/f6c761c3-caca-42e0-865d-37b8002fa512)
 ![example – 7](https://github.com/babycommando/machinascript-for-robots/assets/71618056/a6cd7442-2705-49fc-87ed-263b809feb1d)
 
-# MachinaScript For Robots 
-MachinaScript is a set of tools and a LLM-JSON-based language that enable humans to build their own robots right now.
-Animate generative movements, give it personality and teach new skills with high agency level.
-Control arduinos, raspberrypis, servo motors, cameras, sensors or any other compatible pieces of electronics. You name it.
+# MachinaScript For Robots
 
-MachinaScript for Robots aims to democratize the access of bleeding edge intelligent robotics for everyone.
-
-## Getting started
-### Make the robot first
-The easiest way to get started is to begin with the arduino code first.
-Mount your robot and make it move first with programmed orders.
-Then, modify the arduino code to listen for movements instead of pre-programming them (like a remote controller on a toy car).
-You may use as many components as you wish, like servo motors, sensors, buttons, LEDs and more.
-
-### Handle the control to the Ai
-Next we hook the arduino to a computer of your choice. It can be a raspberry pi, your daily computer or even an old laptop that have internet connection.
-
-Editing the brain code should be straight forward - map the arduino components in your code and define their set of rules and functions to interact with it (for example a servo motor can move 180 degrees). Make sure to name it in a way that makes sense for example: "head_motor_vertical".
-
-Next, modify the "system prompt" passed to the LLM based on your set of rules. Add the motors and sensors names.
-
-### Learning new skills
-Skills can be anything inside a function that can be called from the LLM. It can range from a complete set of movements (making a drink, dancing) to taking pictures and talking (text-to-speech).
-
-## Installation
-- clone/download this repo in a folder of your choice
-- edit the brain code system prompt describing your robot
-- hook your robot locomotive and sensorial systems to the brain as described before
+MachinaScript is a dynamic set of tools and a LLM-JSON-based language designed to empower humans in the creation of their own robots. It facilitates the animation of generative movements, the integration of personality, and the teaching of new skills with a high degree of autonomy. With MachinaScript, you can control a wide range of electronic components, including Arduinos, Raspberry Pis, servo motors, cameras, sensors, and much more. Our goal is to make cutting-edge intelligent robotics accessible to everyone.
 
 ## MachinaScript Language Basics
 The MachinaScript language LLM-JSON-based synthax is incredibly modular because it is generative. As long as your brain code is adapted to understand it, you literally have no ending for your creativity.
@@ -114,6 +89,38 @@ Here's a robot dance:
   }
 }
 ```
+
+
+## Getting Started
+
+### Step 1: Make the Robot First
+
+- **Begin with Arduino**: The easiest entry point is to start by programming your robot with Arduino code. 
+  - Construct your robot and get it moving with simple programmed commands.
+  - Modify the Arduino code to accept dynamic commands, similar to how a remote-controlled car operates.
+
+- **Components**: Utilize a variety of components to enhance your robot:
+  - Servo motors, sensors, buttons, LEDs, and any other compatible electronics.
+
+### Step 2: Hand Over Control to the AI
+
+- **Connect the Hardware**: Link your Arduino to a computing device of your choice. This could be a Raspberry Pi, a personal computer, or even an older laptop with internet access.
+
+- **Edit the Brain Code**:
+  - Map Arduino components within your code and establish their rules and functions for interaction. For instance, a servo motor might be named `head_motor_vertical` and programmed to move up to 180 degrees.
+  - Modify the "system prompt" passed to the LLM with your defined rules and component names.
+
+### Step 3: Learning New Skills
+
+- Skills encompass any function callable from the LLM, ranging from complex movement sequences (e.g., making a drink, dancing) to interactive tasks like taking pictures or utilizing text-to-speech.
+
+## Installation
+
+1. **Clone/Download**: Clone or download this repository into a chosen directory.
+2. **Edit the Brain Code**: Customize the brain code's system prompt to describe your robot's capabilities.
+3. **Connect Hardware**: Integrate your robot's locomotion and sensory systems as previously outlined.
+
+
 
 ## Community
 Ready to share your projects to the world?
