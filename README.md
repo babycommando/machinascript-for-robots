@@ -9,6 +9,8 @@
 ![example – 6](https://github.com/babycommando/machinascript-for-robots/assets/71618056/f6c761c3-caca-42e0-865d-37b8002fa512)
 ![example – 7](https://github.com/babycommando/machinascript-for-robots/assets/71618056/a6cd7442-2705-49fc-87ed-263b809feb1d)
 
+# Read all about it on the [medium article](https://medium.com/@babycmd/introducing-llm-powered-robots-machinascript-for-robots-2dc8d76704b6)
+
 # MachinaScript For Robots
 
 MachinaScript is a dynamic set of tools and a LLM-JSON-based language designed to empower humans in the creation of their own robots. It facilitates the animation of generative movements, the integration of personality, and the teaching of new skills with a high degree of autonomy. With MachinaScript, you can control a wide range of electronic components, including Arduinos, Raspberry Pis, servo motors, cameras, sensors, and much more. Our goal is to make cutting-edge intelligent robotics accessible to everyone.
