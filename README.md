@@ -123,9 +123,12 @@ Also follow our socials and consider supporting the project!
 
 ## Note from the author
 ```
-MachinaScript is my gift for the maker community, wich has teached me so much about being a human. Let the robots live forever.
+MachinaScript is my gift for the maker community,
+wich has teached me so much about being a human.
+Let the robots live forever.
 
-Made with love for all the makers out there! This project is and always will be free and open source for everyone.
+Made with love for all the makers out there!
+This project is and always will be free and open source for everyone.
 
 babycommando
 ```
