@@ -2,6 +2,8 @@
 
 After cloning/downloading this repo, make sure you have the latest version of python 3 and the Arduino IDE.
 
+For better understanding of the project it is recommended to start working with the Machina1 project. Instructions below.
+
 Then install the following python libs:
 
 ```
