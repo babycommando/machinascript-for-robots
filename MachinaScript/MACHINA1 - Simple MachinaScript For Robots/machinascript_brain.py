@@ -37,7 +37,7 @@
 #+------------------------------------------------------------------+
 
 # tip: if you have no idea what it all means, try pasting the contents
-# of this file into GPT or any other LLM and ask for a summary.
+# of this file into GPT-4 or any other LLM and ask for a summary.
 # Then you can start making your own modifications and modules precisely.
 
 import json
@@ -95,10 +95,21 @@ def get_machina_script(command):
     return completion.choices[0].message.content
 
 def read_system_prompt():
-    """Reads the system prompt configuration from a JSON file."""
-    with open('MachinaScript.json', 'r') as file:
-        data = json.load(file)
-    return {"role": "system", "content": data['system']}
+    """Reads instructions and project specifications from two files and prepares them for the LLM."""
+    # Initialize an empty string to hold the combined content
+    combined_content = ""
+    
+    # Read the first file (MachinaScript language instructions)
+    with open('machinascript_language.txt', 'r') as file:
+        combined_content += file.read() + "\n\n"  # Append file content with a newline for separation
+    
+    # Read the second file (Project specifications template)
+    # Note: edit this file with your project specifications.
+    with open('machinascript_project_specifics.txt', 'r') as file:
+        combined_content += file.read()  # Append second file content
+    
+    # Return the combined content in the expected format for the LLM
+    return {"role": "system", "content": combined_content}
 
 def execute_machina_script(script):
     """Parses the MachinaScript and executes the actions by sending commands to Arduino."""

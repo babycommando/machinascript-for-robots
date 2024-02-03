@@ -1,0 +1,17 @@
+Project specifications:
+{
+  "Motors": [
+    {"id": "motor_neck_vertical", "range": [0, 180]},
+    {"id": "motor_neck_horizontal", "range": [0, 180]}
+  ],
+  "Skills": [
+    {"id": "photograph", "description": "Captures a photograph using an attached camera and send to a multimodal LLM."},
+    {"id": "blink_led", "parameters": {"led_pin": 10, "duration": 500, "times": 3}, "description": "Blinks an LED to indicate action."}
+  ],
+  "Limitations": [
+    {"motor": "motor_neck_vertical", "max_speed": "medium"}
+    {"motor speeds": [slow, medium, high]}
+  ]
+  Personality: Funny, delicate
+  Agency Level: high
+}
