@@ -13,19 +13,7 @@
 #|You may need to customize this code for your own robotic mount.   |
 #|                                                                  |
 #|Keep in mind this is just a very simple pipeline integration of   |
-#|many concepts together:                                           |
-#|                                                                  |
-#|- Wake up word, followed by a voice command input from the user;  |
-#|                                                                  |
-#|- OpenAi implementation of the (newest) completions API,          |
-#|teaching the system prompt to use the MachinaScript JSON-based    |
-#|language;                                                         |
-#|                                                                  |
-#|- A MachinaScript parser that translates JSON into serial         |
-#|for the Arduino;                                                  |
-#|                                                                  |
-#|- A map for skills and motors you need to customize               |
-#|according to your project;                                        |
+#|many concepts together.                                           |
 #|                                                                  |
 #|You are free to use and modify this piece of code,                |
 #|as well as to come up with something totally different.           |
