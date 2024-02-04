@@ -22,12 +22,13 @@ Try taking a look at all the files in this repository first.
 - MachinaScript_Project-Specs.txt
 ```
 
-The *Body* represent all the things microcontroller/Arduino-related - sensors, motors, leds and serials.
-The *Brain* is where most of the work happens - query LLMs, parse the MachinaScript into serial and teach new skills for your robots. Don't forget to properly set up your openAi api keys, or hook it to a local LLM server running in your machine like LMStudio.
+- The *Body* represent all the things microcontroller/Arduino-related - sensors, motors, leds and serials.
 
-*MachinaScript_Language.txt* the initial part of the system prompt. It contains basic understanding for the Ai to understand how to write in the MachinaScript JSON-based language format. You may only edit this part of the prompt if you want to expand or modify the basics of the language itself based on your project. This would require changing the parsing functions in your python Brain file.
+- The *Brain* is where most of the work happens - query LLMs, parse the MachinaScript into serial and teach new skills for your robots. Don't forget to properly set up your openAi api keys, or hook it to a local LLM server running in your machine like LMStudio.
 
-*MachinaScript_Project-Specs.txt* is where you will teach the Ai about your project specifications. You must edit this file after you finished implementing your body and brain code because they may contain variables and limitations in the code that the Ai may be unaware of. Example: servo motors can move 180 degrees, the normal pose is at 90 degrees. Note that the synthax in this is still in very early beta, so there is a lot of exploration ongoing for this part. It is important to make things clear and spend the less tokens possible to spare time and money on your project.
+- *MachinaScript_Language.txt* the initial part of the system prompt. It contains basic understanding for the Ai to understand how to write in the MachinaScript JSON-based language format. You may only edit this part of the prompt if you want to expand or modify the basics of the language itself based on your project. This would require changing the parsing functions in your python Brain file.
+
+- *MachinaScript_Project-Specs.txt* is where you will teach the Ai about your project specifications. You must edit this file after you finished implementing your body and brain code because they may contain variables and limitations in the code that the Ai may be unaware of. Example: servo motors can move 180 degrees, the normal pose is at 90 degrees. Note that the synthax in this is still in very early beta, so there is a lot of exploration ongoing for this part. It is important to make things clear and spend the less tokens possible to spare time and money on your project.
 
 ## Suggested Order
 
