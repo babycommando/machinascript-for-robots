@@ -92,7 +92,7 @@ As long as your brain unit code is adapted to interpret it, you have no ending f
 This is an example of the complete language structure in its current latest version. Note you can change the complete synthax for the language structure for your needs, no strings attached. Just make sure it will work with your brain module generating, parsing and serializing.
 
 ### Teaching MachinaScript to LLMs
-The project was designed to be used accrooss the wide ecosystem of large language models, multimodals and non-multimodals, locals and non-locals. Note that autopilot units like Machina2 would require some form of multi-modality to sense the world via images and plan actions by itself.
+The project was designed to be used accross the wide ecosystem of large language models, multimodals and non-multimodals, locals and non-locals. Note that autopilot units like Machina2 would require some form of multi-modality to sense the world via images and plan actions by itself.
 
 To instruct a LLM to talk in the MachinaScript Synthax, we pass a system message that looks like this:
 ```
