@@ -4,7 +4,7 @@ After cloning/downloading this repo, make sure you have the latest version of py
 
 For better understanding of the project it is recommended to start working with the Machina1 project, as Machina2 is still under development. Instructions below.
 
-Then install the following python libs:
+Install the following python libs:
 
 ```
 pip install pyserial SpeechRecognition openai
