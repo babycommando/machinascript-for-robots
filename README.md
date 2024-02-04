@@ -1,5 +1,3 @@
-
-
 ![MachinaScript For Robots](https://github.com/babycommando/machinascript/assets/71618056/9cf321ae-187f-414d-84a2-c2690c78394a)
 ![example – 2](https://github.com/babycommando/machinascript/assets/71618056/c00c28eb-20e2-466e-8991-62a821cc2408)
 ![example – 3](https://github.com/babycommando/machinascript/assets/71618056/f4e3f545-a4f6-4731-bbb9-474b75670b7f)
@@ -146,7 +144,7 @@ note the JSON-style here can be completely reworked into any kind of text you wa
 
 We are releasing a set of finetuned models for MachinaScript soon to make its generations even better. You can also finetune models for your own specific usecase too.
 
-### Bonus: Animated Movements and Motinon Design Principles
+### Bonus: Animated Movements and Motion Design Principles
 An action can contain multiple movements in an order to perform animations (set of movements). It may even contain embodied personality in the motion. 
 
 Check out [Disney's latest robot that combines engineering with their team of motion designers](https://youtu.be/-cfIm06tcfA) to create a more human friendly machine in the style of BD-1.
