@@ -48,15 +48,16 @@ import os
 from openai import OpenAI
 
 # Initialize OpenAI client with updated method
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+client = OpenAI(base_url="http://localhost:1234/v1", api_key="not-needed")
 
 # Define the serial connection to Arduino
-arduino_serial = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+arduino_serial = serial.Serial('COM3', 9600, timeout=1)  #change COM3 with your arduino port
+# arduino_serial = "/dev/ttyACM0"  # for Linux/Mac
 
 # Mapping of motor names to their corresponding Arduino pins
 motor_mapping = {
-    "motor_neck_vertical": 3,
-    "motor_neck_horizontal": 5,
+    "motor_neck_vertical": "A",
+    "motor_neck_horizontal": "B",
     # Define additional motors and their Arduino pins here
 }
 
@@ -86,7 +87,7 @@ def get_machina_script(command):
     """Queries the OpenAI API with the spoken command to generate a MachinaScript."""
     system_message = read_system_prompt()
     completion = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="local-model", # this field is currently unused
         messages=[
             system_message,
             {"role": "user", "content": command}
@@ -100,12 +101,12 @@ def read_system_prompt():
     combined_content = ""
     
     # Read the first file (MachinaScript language instructions)
-    with open('machinascript_language.txt', 'r') as file:
+    with open('machinascript_language_large.txt', 'r') as file:
         combined_content += file.read() + "\n\n"  # Append file content with a newline for separation
     
     # Read the second file (Project specifications template)
     # Note: edit this file with your project specifications.
-    with open('machinascript_project_specifics.txt', 'r') as file:
+    with open('machinascript_project_specs.txt', 'r') as file:
         combined_content += file.read()  # Append second file content
     
     # Return the combined content in the expected format for the LLM
@@ -123,14 +124,30 @@ def execute_machina_script(script):
             execute_skills(action["useSkills"])
 
 def execute_movements(movements):
-    """Generates and sends the movement commands to the Arduino."""
+    """Generates and sends the combined movement commands to the Arduino."""
+    # Initialize command strings for both motors
+    commands_for_A = []
+    commands_for_B = []
+
+    # Translate speed from 'medium', 'slow', 'fast' to milliseconds or direct values
+    speed_translation = {"slow": 30, "medium": 10, "fast": 4}
+
     for movement_key, movement in movements.items():
-        for motor_name, details in movement.items():
-            if motor_name in motor_mapping:
-                pin = motor_mapping[motor_name]
-                command = f"{pin},{details['position']},{details['speed']}\n"
-                send_to_arduino(command)
-                time.sleep(1)  # Adjust as needed for movement duration
+        if "motor_neck_vertical" in movement:
+            # Add command for motor A
+            speed_for_A = speed_translation[movement["speed"]]  # Translate speed
+            commands_for_A.append(f"A:{movement['motor_neck_vertical']},{speed_for_A}")
+        if "motor_neck_horizontal" in movement:
+            # Add command for motor B
+            speed_for_B = speed_translation[movement["speed"]]  # Translate speed
+            commands_for_B.append(f"B:{movement['motor_neck_horizontal']},{speed_for_B}")
+
+    # Combine commands for A and B
+    combined_commands = ";".join(commands_for_A + commands_for_B) + ";" + "\n"
+
+    # Send combined commands to Arduino
+    send_to_arduino(combined_commands)
+    time.sleep(1)  # Adjust as needed for movement duration
 
 def execute_skills(skills_dict):
     """Executes the defined skills."""

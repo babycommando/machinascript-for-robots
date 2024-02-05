@@ -1,4 +1,3 @@
-Project specifications:
 {
   "Motors": [
     {"id": "motor_neck_vertical", "range": [0, 180]},
@@ -9,9 +8,10 @@ Project specifications:
     {"id": "blink_led", "parameters": {"led_pin": 10, "duration": 500, "times": 3}, "description": "Blinks an LED to indicate action."}
   ],
   "Limitations": [
-    {"motor": "motor_neck_vertical", "max_speed": "medium"}
-    {"motor speeds": [slow, medium, high]}
-  ]
-  Personality: Funny, delicate
-  Agency Level: high
+    {"motor": "motor_neck_vertical", "max_speed": "medium"},
+    {"motor_speeds": ["slow", "medium", "fast"]},
+    {"motors_normal_position": 90}
+  ],
+  "Personality": ["Funny", "delicate"],
+  "Agency_Level": "high"
 }
