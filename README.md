@@ -58,6 +58,11 @@ MachinaScript's mission is to make cutting-edge intelligent robotics accessible 
 
 <br><br>
 
+## Installation: 
+### Read the user manual in the [code directory here](https://github.com/babycommando/machinascript-for-robots/tree/main/MachinaScript).
+
+<br><br>
+
 # A New Way to Build Robots
 
 ## A Simple, Modular Pipeline
@@ -177,9 +182,6 @@ You can learn more about the 12 principles of animation [here](https://www.youtu
 ### Step 3: Learning New Skills
 
 - Skills encompass any function callable from the LLM, ranging from complex movement sequences (e.g., making a drink, dancing) to interactive tasks like taking pictures or utilizing text-to-speech.
-
-## Installation
-You can have a deep dive on building your machines on the [code directory here](https://github.com/babycommando/machinascript-for-robots/tree/main/MachinaScript).
 
 Here's a quick overview:
 1. **Clone/Download**: Clone or download this repository into a chosen directory.
