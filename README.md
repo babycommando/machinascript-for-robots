@@ -22,7 +22,7 @@
 <h4 align="center">Build modular ai-powered robots in your garage right now.</h4>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-0.2-limegreen">
+  <img src="https://img.shields.io/badge/Version-0.2.1-limegreen">
   <a href="https://discord.gg/2GqU225n"><img src="https://discordapp.com/api/guilds/1202776762820468806/widget.png?style=shield" alt="Discord"/></a>
   <a href="https://ko-fi.com/babycommando">
     <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
