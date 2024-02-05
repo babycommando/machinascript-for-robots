@@ -21,8 +21,9 @@ MachinaBrain -> the computer code for the robot's brain
 
 3. After cloning/downloading this repo, make sure you have the latest version of python 3 and the Arduino IDE.
 
-# Getting Started: MACHINA1
+## Getting Started: MACHINA1
 Machina1 is a modular example that can grow into any project design.
+
 ![image](https://i.imgur.com/TOYmnXb.png)
 
 ## Robot FileSystem: Body and Brain
