@@ -37,116 +37,70 @@
 # of this file into GPT or any other LLM and ask for a summary.
 # Then you can start making your own modifications and modules precisely.
 
-#include <Arduino.h>
 #include <Servo.h>
 
-// Servo configuration
-const int numServos = 4;
-Servo servos[numServos];
-const int servoPins[numServos] = {3, 5, 6, 9}; // Servo pin assignments
+Servo servoA; // Servo for motor A connected to pin 9
+Servo servoB; // Servo for motor B connected to pin 8
 
-// LED configuration
-const int numLEDs = 2;
-const int ledPins[numLEDs] = {10, 11}; // LED pin assignments
-
-// Function declarations
-void executeAction(const String& actionCommand);
-void executeMovement(const String& movementCommand);
-void moveServo(int motorID, int position, int speed);
-int getMotorIDByPin(int pin);
-int interpretSpeed(const String& speedStr);
-void blinkLED(int ledPin, int duration, int times);
+// Target positions for servo A and B
+int targetPositionA = 0, targetPositionB = 0;
+// Speeds for servo A and B movement in milliseconds
+int speedA = 0, speedB = 0;
+// Timestamps for the last movement update for servo A and B
+unsigned long lastUpdateA = 0, lastUpdateB = 0;
+// Flags to track if servo A and B are currently moving
+bool movingA = false, movingB = false;
 
 void setup() {
-    Serial.begin(9600); // Initialize serial communication
-    // Attach servos to their respective pins
-    for (int i = 0; i < numServos; i++) {
-        servos[i].attach(servoPins[i]);
-    }
-    // Set LED pins as output
-    for (int i = 0; i < numLEDs; i++) {
-        pinMode(ledPins[i], OUTPUT);
-    }
+  servoA.attach(9); // Attach servo motor A to pin 9
+  servoB.attach(8); // Attach servo motor B to pin 8
+  Serial.begin(9600); // Initialize serial communication at 9600 baud rate
 }
 
 void loop() {
-    static String receivedData = ""; // Buffer for incoming data
-    // Read serial data
-    while (Serial.available() > 0) {
-        char inChar = (char)Serial.read();
-        // Check for end of command
-        if (inChar == '\n') {
-            executeAction(receivedData); // Execute received command
-            receivedData = ""; // Clear buffer
-        } else {
-            receivedData += inChar; // Append received character
-        }
-    }
-}
-
-void executeAction(const String& actionCommand) {
-    // Process each movement command within the received action
-    int movementStart = 0, movementEnd;
-    while ((movementEnd = actionCommand.indexOf(';', movementStart)) != -1) {
-        executeMovement(actionCommand.substring(movementStart, movementEnd));
-        movementStart = movementEnd + 1;
-    }
-}
-
-void executeMovement(const String& movementCommand) {
-    // Check and execute LED blink command
-    if (movementCommand.startsWith("blinkLED")) {
-        int ledPin, duration, times;
-        sscanf(movementCommand.c_str(), "blinkLED,%d,%d,%d", &ledPin, &duration, &times);
-        blinkLED(ledPin, duration, times);
+  static String receivedData = ""; // Buffer to accumulate received serial data
+  while (Serial.available() > 0) { // Check if data is available to read
+    char inChar = (char)Serial.read(); // Read the incoming character
+    if (inChar == '\n') { // Check if the character signifies end of command
+      parseCommands(receivedData); // Parse and execute the received commands
+      receivedData = ""; // Reset buffer for next command
     } else {
-        // Parse and execute servo movement command
-        int servoPin, position;
-        char speedStr[10];
-        if (sscanf(movementCommand.c_str(), "%d,%d,%s", &servoPin, &position, speedStr) == 3) {
-            int motorID = getMotorIDByPin(servoPin);
-            int speed = interpretSpeed(speedStr);
-            if (motorID != -1) {
-                moveServo(motorID, position, speed);
-            }
-        }
+      receivedData += inChar; // Accumulate the incoming data
     }
+  }
+
+  // Continuously update servo positions based on the current commands
+  updateServo(servoA, targetPositionA, speedA, lastUpdateA, movingA);
+  updateServo(servoB, targetPositionB, speedB, lastUpdateB, movingB);
 }
 
-void moveServo(int motorID, int position, int speed) {
-    // Control servo to move to the specified position at the given speed
-    Servo& servo = servos[motorID];
-    int currentPosition = servo.read();
-    for (int pos = currentPosition; pos != position; pos += (pos < position) ? 1 : -1) {
-        servo.write(pos);
-        delay(speed);
-    }
+void parseCommands(const String& commands) {
+  // Expected command format: "A:position,speed;B:position,speed"
+  // Speed is passed directly in milliseconds
+  sscanf(commands.c_str(), "A:%d,%d;B:%d,%d", &targetPositionA, &speedA, &targetPositionB, &speedB);
+
+  // Mark both servos as moving and record the start time of movement
+  lastUpdateA = millis();
+  lastUpdateB = millis();
+  movingA = true;
+  movingB = true;
 }
 
-int getMotorIDByPin(int pin) {
-    // Identify the servo motor ID associated with the given pin
-    for (int i = 0; i < numServos; i++) {
-        if (servoPins[i] == pin) {
-            return i;
-        }
+void updateServo(Servo& servo, int targetPosition, int speed, unsigned long& lastUpdate, bool& moving) {
+  if (moving) { // Check if the servo is supposed to be moving
+    unsigned long currentTime = millis(); // Get current time
+    // Update the servo position if the specified speed interval has elapsed
+    if (currentTime - lastUpdate >= speed) {
+      int currentPosition = servo.read(); // Read current position
+      // Move servo towards target position
+      if (currentPosition < targetPosition) {
+        servo.write(++currentPosition);
+      } else if (currentPosition > targetPosition) {
+        servo.write(--currentPosition);
+      } else {
+        moving = false; // Stop moving if target position is reached
+      }
+      lastUpdate = currentTime; // Update the last movement time
     }
-    return -1;
-}
-
-int interpretSpeed(const String& speedStr) {
-    // Convert speed string to delay time
-    if (speedStr == "slow") return 20;
-    if (speedStr == "medium") return 10;
-    if (speedStr == "fast") return 5;
-    return 10;
-}
-
-void blinkLED(int ledPin, int duration, int times) {
-    // Blink the specified LED at the given duration and repeat times
-    for (int i = 0; i < times; i++) {
-        digitalWrite(ledPin, HIGH);
-        delay(duration);
-        digitalWrite(ledPin, LOW);
-        delay(duration);
-    }
+  }
 }
