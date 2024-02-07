@@ -120,7 +120,7 @@ Ideally you will only change the specs of your project.
 ### Declaring Specs: Teaching the LLM about your unique robot design - and personality.
 No artisanal robot is the same. They are all beautifully unique.
 
-One of the most mind blowing things about MachinaScript is that it can embody any design ever. You just need to tell it in a set of specs what are their phisical properties and limitations, as well as instructions for the behavior of the LLM. Should it be funny? Serious? What are its goals? Favorite color? The [machinascript_project_specs.txt](https://github.com/babycommando/machinascript-for-robots/blob/main/MachinaScript/MACHINA1%20-%20Simple%20MachinaScript%20For%20Robots/machinascript_project_specs.txt) is where you put everything related to your robot personality.
+One of the most mind blowing things about MachinaScript is that it can embody any design ever. You just need to tell it in a set of specs what are their physical properties and limitations, as well as instructions for the behavior of the LLM. Should it be funny? Serious? What are its goals? Favorite color? The [machinascript_project_specs.txt](https://github.com/babycommando/machinascript-for-robots/blob/main/MachinaScript/MACHINA1%20-%20Simple%20MachinaScript%20For%20Robots/machinascript_project_specs.txt) is where you put everything related to your robot personality.
 
 For this to work, we will append a little extra information in the system message containing the following information:
 ```
