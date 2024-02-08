@@ -19,7 +19,7 @@
   <br>
 </h1>
 
-<h4 align="center">Build modular ai-powered robots in your garage right now.</h4>
+<h4 align="center">🤘🤖🤘 Build modular ai-powered robots in your garage right now.</h4>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Version-0.2.1-limegreen">
