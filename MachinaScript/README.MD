@@ -47,8 +47,6 @@ MACHINA1
 
 - *MachinaScript_Language.txt* the initial part of the system prompt. It contains basic understanding for the Ai to understand how to write in the MachinaScript JSON-based language format. You may only edit this part of the prompt if you want to speed up the process of prompt tokenization or modify the basics of the language itself based on your project. This may require changing the parsing functions in your python Brain file as well.
 
-- *MachinaScript_Language.txt* 
-
 - *MachinaScript_Project-Specs.txt* is where you will teach the Ai about your project specifications. You must edit this file after you finished implementing your body and brain code because they may contain variables and limitations in the code that the Ai may be unaware of. Example: servo motors can move 180 degrees, the normal pose is at 90 degrees. Note that the synthax in this is still in very early beta, so there is a lot of exploration ongoing for this part. It is important to make things clear and spend the less tokens possible to spare time and money on your project.
 
 ## Step 1: Assembling Your Robot
