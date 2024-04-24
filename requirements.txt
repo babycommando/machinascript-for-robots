@@ -1,0 +1,8 @@
+requests
+opencv-python
+pyserial
+pyttsx3
+SpeechRecognition
+openai
+hugchat
+PyAudio
