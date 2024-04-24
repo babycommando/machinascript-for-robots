@@ -5,7 +5,15 @@
 ![example – 4](https://github.com/babycommando/machinascript-for-robots/assets/71618056/2c18b953-bf94-4559-825a-da5fd5c61295)
 ![example – 7](https://github.com/babycommando/machinascript-for-robots/assets/71618056/a6cd7442-2705-49fc-87ed-263b809feb1d)
 
-# Patch 0.2 - Presenting Machina2: Autogen Self-Controlled Robots
+# Patch 0.2.2 - Presenting Machina2B: Groq-Powered Self-Controlled Robots
+## A Symphony of Thought and Action.
+![banner0 2 2](https://github.com/babycommando/machinascript-for-robots/assets/71618056/527d91de-c4d5-47ae-808e-5fa48c6b4de1)
+![comics2](https://github.com/babycommando/machinascript-for-robots/assets/71618056/bcdaa2a3-ac67-43de-b8ad-298a119e9279)
+
+***MACHINA2B embodies a loop of perception and action that simulates the flow of human thought.***
+Through the integration of a vision systems and a serial to analogic signals parser, MACHINA2B interprets visual data and crafts responses in near real-time, enabling machines to perform complex tasks with elegance and some level of precision - a fantastic achievement for such an early stage of the technology.
+
+# Patch 0.2.1 - Presenting Machina2A: Autogen Self-Controlled Robots
 ![Prancheta – 3](https://github.com/babycommando/machinascript-for-robots/assets/71618056/45e63e99-14d3-45a7-be26-fe0f6b6b6b65)
 
 <br>
