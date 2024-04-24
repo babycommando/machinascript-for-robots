@@ -2,6 +2,10 @@
 
 ---
 
+![banner0 2 2](https://github.com/babycommando/machinascript-for-robots/assets/71618056/3de6a27c-c506-477d-95c1-2e0758594f45)
+
+![comics2](https://github.com/babycommando/machinascript-for-robots/assets/71618056/6a42eec3-1140-4121-810e-0c6cfca856f9)
+
 # A Symphony of Thought and Action
 
 We are thrilled to unveil Patch 0.2.2, bringing to life MACHINA2B— a milestone in the mission to make sophisticated robotics accessible to everyone, from hobbyists to innovators, enabling the creation of autonomous robots right from your garage.
