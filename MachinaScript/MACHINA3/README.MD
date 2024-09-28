@@ -70,8 +70,8 @@ Dear hackers, we are proud to say that LLAMA3.2 is now fully integrated with vis
 1. Clone the repo, install requirements.txt
 2. Edit your project specs at the MachinaBrain module at `brain.py` and `machinascript_project.specs.txt`
 3. Add a free Groq api secret key at the `brain.py` module for ultra fast inference speed (+300 tps)
-3. Build your robot with serial controls, template suggested at `MachinaBody` module. Test it out with the python testing script in it.
-4. Hook the arduino body to the computer runing the brain python module and have fun.
+4. Build your robot with serial controls, template suggested at `MachinaBody` module. Test it out with the python testing script in it.
+5. Hook the arduino body to the computer runing the brain python module and have fun.
 
 ## SAFETY PROTOCOL
 
