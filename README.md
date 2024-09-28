@@ -1,9 +1,17 @@
 ![MachinaScript For Robots](https://github.com/babycommando/machinascript/assets/71618056/9cf321ae-187f-414d-84a2-c2690c78394a)
 ![example – 2](https://github.com/babycommando/machinascript/assets/71618056/c00c28eb-20e2-466e-8991-62a821cc2408)
 ![example – 3](https://github.com/babycommando/machinascript/assets/71618056/f4e3f545-a4f6-4731-bbb9-474b75670b7f)
-![example](https://github.com/babycommando/machinascript/assets/71618056/5ef748bc-8334-4e10-99bd-19dcc6229021)
+![example – 10](https://github.com/user-attachments/assets/222d0513-56c8-4dcc-97fc-708b56bea449)
 ![example – 4](https://github.com/babycommando/machinascript-for-robots/assets/71618056/2c18b953-bf94-4559-825a-da5fd5c61295)
 ![example – 7](https://github.com/babycommando/machinascript-for-robots/assets/71618056/a6cd7442-2705-49fc-87ed-263b809feb1d)
+
+# Patch 0.3 - Presenting Machina3: Groq-Powered Self-Controlled Robots
+![ezgif-6-02cb4e9eea](https://github.com/user-attachments/assets/111694c5-4b06-49e2-8df5-1b5d19d3ed1f)
+> Added support for Llama 3.2 Vision at ultra fast Groq Inference (+300tps)
+> Added support for JSON mode
+## See full release [Here](https://github.com/babycommando/machinascript-for-robots/tree/main/MachinaScript/MACHINA3)
+
+---
 
 # Patch 0.2.2 - Presenting Machina2B: Groq-Powered Self-Controlled Robots
 ## A Symphony of Thought and Action.
